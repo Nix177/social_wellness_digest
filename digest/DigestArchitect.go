@@ -26,11 +26,11 @@ type DigestData struct {
 }
 
 func main() {
-	inputPath := filepath.Join("..", "filtering", "filtered_feed.json")
+	inputPath := filepath.Join("filtering", "filtered_feed.json")
 	outputPath := filepath.Join("weekly_digest.html")
 
 	fmt.Println("Reading filtered feed in Go...")
-	
+
 	// Read JSON file
 	file, err := ioutil.ReadFile(inputPath)
 	if err != nil {

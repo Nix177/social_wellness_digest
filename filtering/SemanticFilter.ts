@@ -20,7 +20,7 @@ class SemanticFilter {
     private threshold: number;
 
     constructor(threshold: number = 80) {
-        self.threshold = threshold;
+        this.threshold = threshold;
     }
 
     /**

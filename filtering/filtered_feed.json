@@ -1,0 +1,74 @@
+[
+  {
+    "id": "post_1",
+    "text": "Here is some interesting content about AI. #tech #growth",
+    "source": "Twitter",
+    "metadata": {
+      "author": "User_1",
+      "original_timestamp": 1770205310.5173976
+    },
+    "relevanceScore": 99,
+    "category": "High Value",
+    "reasoning": "Relevant to user interests"
+  },
+  {
+    "id": "post_3",
+    "text": "Here is some interesting content about Rust. #tech #growth",
+    "source": "LinkedIn",
+    "metadata": {
+      "author": "User_3",
+      "original_timestamp": 1770205310.5173976
+    },
+    "relevanceScore": 93,
+    "category": "High Value",
+    "reasoning": "Relevant to user interests"
+  },
+  {
+    "id": "post_5",
+    "text": "Here is some interesting content about Rust. #tech #growth",
+    "source": "Twitter",
+    "metadata": {
+      "author": "User_5",
+      "original_timestamp": 1770205310.5173976
+    },
+    "relevanceScore": 78,
+    "category": "High Value",
+    "reasoning": "Relevant to user interests"
+  },
+  {
+    "id": "post_14",
+    "text": "Here is some interesting content about AI. #tech #growth",
+    "source": "Twitter",
+    "metadata": {
+      "author": "User_14",
+      "original_timestamp": 1770205310.5173976
+    },
+    "relevanceScore": 83,
+    "category": "High Value",
+    "reasoning": "Relevant to user interests"
+  },
+  {
+    "id": "post_17",
+    "text": "Here is some interesting content about Rust. #tech #growth",
+    "source": "RSS_Tech",
+    "metadata": {
+      "author": "User_17",
+      "original_timestamp": 1770205310.5173976
+    },
+    "relevanceScore": 92,
+    "category": "High Value",
+    "reasoning": "Relevant to user interests"
+  },
+  {
+    "id": "post_18",
+    "text": "Here is some interesting content about Rust. #tech #growth",
+    "source": "RSS_Tech",
+    "metadata": {
+      "author": "User_18",
+      "original_timestamp": 1770205310.5173976
+    },
+    "relevanceScore": 77,
+    "category": "High Value",
+    "reasoning": "Relevant to user interests"
+  }
+]

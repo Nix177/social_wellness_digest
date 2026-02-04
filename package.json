@@ -1,0 +1,25 @@
+{
+  "name": "social_wellness_digest",
+  "version": "1.0.0",
+  "description": "Combattre le burnout numérique via un écosystème d'utilité radicale.\r Ce projet implémente \"Application 1\" : Le Digest de Bien-être Social.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Nix177/social_wellness_digest.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Nix177/social_wellness_digest/issues"
+  },
+  "homepage": "https://github.com/Nix177/social_wellness_digest#readme",
+  "devDependencies": {
+    "@types/node": "^25.2.0",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.9.3"
+  }
+}
