@@ -1,11 +1,15 @@
 <!DOCTYPE html>
 <html lang="fr">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Slow Social · Le Rituel du Dimanche</title>
-    <meta name="description" content="Le remède à la machine à traumatismes permanente des flux infinis. Publiez une seule fois par semaine. Dimanche 18h00.">
-    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
+    <meta name="description"
+        content="Le remède à la machine à traumatismes permanente des flux infinis. Publiez une seule fois par semaine. Dimanche 18h00.">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400&family=Inter:wght@300;400;500&display=swap"
+        rel="stylesheet">
     <style>
         :root {
             --bg: #faf9f7;
@@ -16,11 +20,15 @@
             --accent-dark: #8b7355;
             --border: #e8e4dc;
             --card-bg: #ffffff;
-            --shadow: rgba(0,0,0,0.04);
+            --shadow: rgba(0, 0, 0, 0.04);
             --gradient: linear-gradient(135deg, #f5f3ef 0%, #e8e4dc 100%);
         }
 
-        * { margin: 0; padding: 0; box-sizing: border-box; }
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
 
         body {
             font-family: 'Inter', -apple-system, sans-serif;
@@ -106,8 +114,13 @@
         }
 
         .sunday-active .countdown-label,
-        .sunday-active .countdown-name { color: rgba(255,255,255,0.8); }
-        .sunday-active .countdown-value { color: white; }
+        .sunday-active .countdown-name {
+            color: rgba(255, 255, 255, 0.8);
+        }
+
+        .sunday-active .countdown-value {
+            color: white;
+        }
 
         /* Demo Mode Badge */
         .demo-badge {
@@ -128,8 +141,15 @@
         }
 
         @keyframes pulse {
-            0%, 100% { opacity: 1; }
-            50% { opacity: 0.7; }
+
+            0%,
+            100% {
+                opacity: 1;
+            }
+
+            50% {
+                opacity: 0.7;
+            }
         }
 
         /* Main Layout */
@@ -229,14 +249,19 @@
             border: 1px solid var(--border);
         }
 
-        .btn-secondary:hover { background: var(--border); }
+        .btn-secondary:hover {
+            background: var(--border);
+        }
 
         .btn-primary {
             background: linear-gradient(135deg, var(--accent) 0%, var(--accent-dark) 100%);
             color: white;
         }
 
-        .btn-primary:hover { transform: translateY(-1px); box-shadow: 0 4px 12px rgba(139, 115, 85, 0.3); }
+        .btn-primary:hover {
+            transform: translateY(-1px);
+            box-shadow: 0 4px 12px rgba(139, 115, 85, 0.3);
+        }
 
         .btn-primary:disabled {
             background: #ccc;
@@ -354,7 +379,9 @@
             transition: transform 0.2s;
         }
 
-        .like-btn:hover { transform: scale(1.2); }
+        .like-btn:hover {
+            transform: scale(1.2);
+        }
 
         /* Archives Teaser */
         .archives-teaser {
@@ -386,7 +413,9 @@
             font-weight: 500;
         }
 
-        .btn-freemium:hover { background: #333; }
+        .btn-freemium:hover {
+            background: #333;
+        }
 
         /* Footer */
         footer {
@@ -405,17 +434,33 @@
             color: var(--text-muted);
         }
 
-        .empty-icon { font-size: 3rem; margin-bottom: 15px; }
+        .empty-icon {
+            font-size: 3rem;
+            margin-bottom: 15px;
+        }
 
         /* Responsive */
         @media (max-width: 600px) {
-            .logo { font-size: 2rem; }
-            .countdown-value { font-size: 2rem; }
-            .compose-section { padding: 20px; }
-            textarea { height: 120px; font-size: 1rem; }
+            .logo {
+                font-size: 2rem;
+            }
+
+            .countdown-value {
+                font-size: 2rem;
+            }
+
+            .compose-section {
+                padding: 20px;
+            }
+
+            textarea {
+                height: 120px;
+                font-size: 1rem;
+            }
         }
     </style>
 </head>
+
 <body>
     <div class="demo-badge" id="demo-badge">🔓 Mode Démo Actif</div>
 
@@ -453,7 +498,8 @@
                 <h2 class="compose-title">Votre Capsule</h2>
                 <span class="draft-count" id="draft-count">0 brouillon(s)</span>
             </div>
-            <textarea id="draft-content" placeholder="Prenez le temps de formuler votre pensée. Elle attendra dimanche..."></textarea>
+            <textarea id="draft-content"
+                placeholder="Prenez le temps de formuler votre pensée. Elle attendra dimanche..."></textarea>
             <div class="compose-actions">
                 <span class="char-count"><span id="char-current">0</span> / 500 caractères</span>
                 <div class="btn-group">
@@ -479,14 +525,16 @@
         <!-- Archives Teaser -->
         <section class="archives-teaser">
             <h3 class="archives-title">📦 Archives Éphémères</h3>
-            <p class="archives-desc">Les capsules disparaissent après 24h. Accédez à vos souvenirs avec Slow Social Premium.</p>
+            <p class="archives-desc">Les capsules disparaissent après 24h. Accédez à vos souvenirs avec Slow Social
+                Premium.</p>
             <button class="btn btn-freemium">Débloquer les Archives · 2,99€/mois</button>
         </section>
     </main>
 
     <footer>
         <p>Slow Social · Le remède au burnout numérique</p>
-        <p style="margin-top: 5px; font-size: 0.75rem;">Pas de publicité. Pas d'algorithme. Juste vous, une fois par semaine.</p>
+        <p style="margin-top: 5px; font-size: 0.75rem;">Pas de publicité. Pas d'algorithme. Juste vous, une fois par
+            semaine.</p>
     </footer>
 
     <!-- Scripts -->
@@ -501,16 +549,16 @@
         let logoClickCount = 0;
         let logoClickTimer = null;
 
-        // SEED DATA (loaded from JSON in production, inline for demo)
+        // SEED DATA with varied styles: wellness, journal, calendrier, wtf
         const seedCapsules = [
-            {"id":"cap_001","author":"Marie L.","avatar":"🌿","content":"Cette semaine, j'ai éteint mon téléphone pendant 4 heures chaque jour. Le silence est devenu mon luxe. Le monde ne s'est pas effondré.","publishedAt":"2026-02-02T18:00:00Z","likes":234},
-            {"id":"cap_002","author":"Thomas D.","avatar":"☕","content":"Dimanche, 17h58. Je regarde mes pensées de la semaine s'accumuler. Ce moment de publication est devenu sacré. Pas de scroll infini, juste cette fenêtre unique.","publishedAt":"2026-02-02T18:00:00Z","likes":189},
-            {"id":"cap_003","author":"Claire B.","avatar":"🎨","content":"Mon rituel dominical : un thé, une bougie, et 20 minutes pour relire tout ce que j'ai écrit cette semaine. La plupart ne sera jamais publié. Et c'est très bien ainsi.","publishedAt":"2026-02-02T18:00:00Z","likes":312},
-            {"id":"cap_004","author":"Antoine R.","avatar":"🌅","content":"J'ai quitté Instagram il y a 3 mois. Slow Social est la seule plateforme où je partage encore. Une fois par semaine, avec intention.","publishedAt":"2026-02-02T18:00:00Z","likes":456},
-            {"id":"cap_005","author":"Sophie M.","avatar":"📚","content":"Avant, je publiais 15 stories par jour. Aujourd'hui, je rédige une seule pensée pendant 7 jours. La qualité a remplacé la quantité.","publishedAt":"2026-02-02T18:00:00Z","likes":278},
-            {"id":"cap_006","author":"Lucas P.","avatar":"🌙","content":"Le burnout numérique m'a frappé l'an dernier. 63% des community managers sont touchés. Slow Social n'est pas une app, c'est une thérapie.","publishedAt":"2026-02-02T18:00:00Z","likes":521},
-            {"id":"cap_007","author":"Emma V.","avatar":"🦋","content":"Mon enfant m'a demandé pourquoi je ne regardais plus mon téléphone le dimanche soir. J'ai répondu : 'Parce que je choisis mes moments de connexion.'","publishedAt":"2026-02-02T18:00:00Z","likes":634},
-            {"id":"cap_008","author":"Hugo T.","avatar":"🎵","content":"BeReal voulait l'authenticité mais créait l'anxiété. Slow Social a compris : le timing compte. 18h00 dimanche, c'est notre rendez-vous.","publishedAt":"2026-02-02T18:00:00Z","likes":198}
+            { "id": "cap_001", "author": "Marie L.", "avatar": "🌿", "content": "Cette semaine, j'ai éteint mon téléphone pendant 4 heures chaque jour. Le silence est devenu mon luxe. Le monde ne s'est pas effondré.", "publishedAt": "2026-02-02T18:00:00Z", "likes": 234 },
+            { "id": "cap_002", "author": "Thomas D.", "avatar": "📓", "content": "Mardi 3h du matin. Je n'arrive pas à dormir. J'ai repensé à ce que tu m'as dit en 2019. Tu avais raison. Sur tout. Je t'écrirai peut-être un jour. Ou pas.", "publishedAt": "2026-02-02T18:00:00Z", "likes": 412 },
+            { "id": "cap_003", "author": "J.", "avatar": "📅", "content": "LUNDI: Café, métro, regrets. MARDI: Café, métro, même regrets. MERCREDI: J'ai pris un thé. JEUDI: Retour au café. VENDREDI: Le barista connaît mon prénom. DIMANCHE: Je l'épouse dans 3 ans.", "publishedAt": "2026-02-02T18:00:00Z", "likes": 891 },
+            { "id": "cap_004", "author": "???", "avatar": "👁️", "content": "J'ai vu un pigeon manger un autre pigeon. Personne ne me croit. Je sais ce que j'ai vu. Le pigeon aussi le sait. Il me regarde par la fenêtre. Depuis 3 jours.", "publishedAt": "2026-02-02T18:00:00Z", "likes": 1247 },
+            { "id": "cap_005", "author": "Anonyme", "avatar": "💔", "content": "Cher journal. Elle est partie. J'ai gardé son pull. Je dors dedans parfois. C'est pathétique. Je m'en fiche. Il sent encore son parfum.", "publishedAt": "2026-02-02T18:00:00Z", "likes": 523 },
+            { "id": "cap_006", "author": "Léo K.", "avatar": "📊", "content": "BILAN SEMAINE: 2 cafés renversés. 1 réunion évitée. 47 mails ignorés. 3 mensonges à ma mère. 1 pizza à 23h. 0 regret. Vivement dimanche prochain.", "publishedAt": "2026-02-02T18:00:00Z", "likes": 678 },
+            { "id": "cap_007", "author": "Gérard", "avatar": "🥖", "content": "Mon voisin fait du bruit à 7h du matin. J'ai décidé de le tuer. Avec gentillesse. Je lui apporte des croissants. Maintenant IL ne dort plus. Check mate.", "publishedAt": "2026-02-02T18:00:00Z", "likes": 1456 },
+            { "id": "cap_008", "author": "Sandrine", "avatar": "🐸", "content": "J'ai adopté une grenouille. Je l'ai appelée François. François ne bouge pas beaucoup. J'ai peur que François soit une pierre. Je l'aime quand même.", "publishedAt": "2026-02-02T18:00:00Z", "likes": 2134 }
         ];
 
         // ============================================
@@ -519,7 +567,7 @@
         document.getElementById('logo').addEventListener('click', () => {
             logoClickCount++;
             if (logoClickTimer) clearTimeout(logoClickTimer);
-            
+
             logoClickTimer = setTimeout(() => { logoClickCount = 0; }, 500);
 
             if (logoClickCount >= 3) {
@@ -536,7 +584,7 @@
         function getNextSunday18UTC() {
             const now = new Date();
             let target = new Date(now);
-            
+
             // Set to Sunday
             const dayOfWeek = now.getUTCDay();
             const daysUntilSunday = (7 - dayOfWeek) % 7;
@@ -589,7 +637,7 @@
         // DRAFT MANAGEMENT
         // ============================================
         const textarea = document.getElementById('draft-content');
-        
+
         textarea.addEventListener('input', () => {
             const len = textarea.value.length;
             document.getElementById('char-current').textContent = len;
@@ -601,7 +649,7 @@
         function saveDraft() {
             const content = textarea.value.trim();
             if (!content) return alert('Écrivez quelque chose avant de sauvegarder.');
-            
+
             manager.saveDraft(content);
             textarea.value = '';
             document.getElementById('char-current').textContent = '0';
@@ -619,7 +667,7 @@
         // ============================================
         function publishCapsule() {
             const canPublish = demoMode || isSundayWindow();
-            
+
             if (!canPublish) {
                 return alert('🔒 Publication uniquement le dimanche à 18h00 UTC.\n\nTriple-cliquez sur "Slow Social" pour activer le mode démo.');
             }
@@ -629,7 +677,7 @@
                 // Try to publish latest draft
                 const drafts = manager.getAllDrafts().filter(d => d.status === 'draft');
                 if (drafts.length === 0) return alert('Aucun brouillon à publier.');
-                
+
                 const result = manager.publishDraft(drafts[drafts.length - 1].id);
                 if (result.success) {
                     showToast('Capsule publiée ! 🎉');
@@ -703,9 +751,9 @@
 
         function formatTime(isoString) {
             const date = new Date(isoString);
-            return date.toLocaleDateString('fr-FR', { 
-                weekday: 'long', 
-                day: 'numeric', 
+            return date.toLocaleDateString('fr-FR', {
+                weekday: 'long',
+                day: 'numeric',
                 month: 'long',
                 hour: '2-digit',
                 minute: '2-digit'
@@ -723,7 +771,7 @@
             updateCountdown();
             updateDraftCount();
             renderFeed();
-            
+
             const publishBtn = document.getElementById('publish-btn');
             const canPublish = demoMode || isSundayWindow();
             publishBtn.disabled = !canPublish;
@@ -745,4 +793,5 @@
         setInterval(updateCountdown, 1000);
     </script>
 </body>
+
 </html>

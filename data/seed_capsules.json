@@ -6,34 +6,34 @@
         "content": "Cette semaine, j'ai éteint mon téléphone pendant 4 heures chaque jour. Le silence est devenu mon luxe. Le monde ne s'est pas effondré. Au contraire, j'ai redécouvert le plaisir de lire sans notifications.",
         "publishedAt": "2026-02-02T18:00:00Z",
         "likes": 234,
-        "isArchived": false
+        "style": "wellness"
     },
     {
         "id": "cap_002",
         "author": "Thomas D.",
-        "avatar": "☕",
-        "content": "Dimanche, 17h58. Je regarde mes pensées de la semaine s'accumuler. Ce moment de publication est devenu sacré. Pas de scroll infini, juste cette fenêtre unique. C'est ça, le slow social.",
+        "avatar": "📓",
+        "content": "Mardi 3h du matin. Je n'arrive pas à dormir. J'ai repensé à ce que tu m'as dit en 2019. Tu avais raison. Sur tout. Je t'écrirai peut-être un jour. Ou pas.",
         "publishedAt": "2026-02-02T18:00:00Z",
-        "likes": 189,
-        "isArchived": false
+        "likes": 412,
+        "style": "journal"
     },
     {
         "id": "cap_003",
         "author": "Claire B.",
         "avatar": "🎨",
-        "content": "Mon rituel dominical : un thé, une bougie, et 20 minutes pour relire tout ce que j'ai écrit cette semaine. La plupart ne sera jamais publié. Et c'est très bien ainsi. L'essentiel reste.",
+        "content": "Mon rituel dominical : un thé, une bougie, et 20 minutes pour relire tout ce que j'ai écrit cette semaine. La plupart ne sera jamais publié. Et c'est très bien ainsi.",
         "publishedAt": "2026-02-02T18:00:00Z",
         "likes": 312,
-        "isArchived": false
+        "style": "wellness"
     },
     {
         "id": "cap_004",
-        "author": "Antoine R.",
-        "avatar": "🌅",
-        "content": "J'ai quitté Instagram il y a 3 mois. Slow Social est la seule plateforme où je partage encore. Une fois par semaine, avec intention. Mes amis attendent mes capsules. Cette rareté a recréé du désir.",
+        "author": "J.",
+        "avatar": "📅",
+        "content": "LUNDI: Café, métro, regrets. MARDI: Café, métro, même regrets. MERCREDI: J'ai pris un thé. JEUDI: Retour au café. VENDREDI: Le barista connaît mon prénom maintenant. SAMEDI: Il m'a offert un croissant. DIMANCHE: Je l'épouse dans 3 ans.",
         "publishedAt": "2026-02-02T18:00:00Z",
-        "likes": 456,
-        "isArchived": false
+        "likes": 891,
+        "style": "calendrier"
     },
     {
         "id": "cap_005",
@@ -42,16 +42,16 @@
         "content": "Avant, je publiais 15 stories par jour. Aujourd'hui, je rédige une seule pensée pendant 7 jours. La qualité a remplacé la quantité. Mon audience a diminué. Ma satisfaction a explosé.",
         "publishedAt": "2026-02-02T18:00:00Z",
         "likes": 278,
-        "isArchived": false
+        "style": "wellness"
     },
     {
         "id": "cap_006",
-        "author": "Lucas P.",
-        "avatar": "🌙",
-        "content": "Le burnout numérique m'a frappé l'an dernier. 63% des community managers sont touchés. Slow Social n'est pas une app, c'est une thérapie. Une publication par semaine, c'est humain.",
+        "author": "??? ",
+        "avatar": "👁️",
+        "content": "J'ai vu un pigeon manger un autre pigeon. Personne ne me croit. Je sais ce que j'ai vu. Le pigeon aussi le sait. Il me regarde maintenant par la fenêtre. Depuis 3 jours.",
         "publishedAt": "2026-02-02T18:00:00Z",
-        "likes": 521,
-        "isArchived": false
+        "likes": 1247,
+        "style": "wtf"
     },
     {
         "id": "cap_007",
@@ -60,78 +60,78 @@
         "content": "Mon enfant m'a demandé pourquoi je ne regardais plus mon téléphone le dimanche soir. J'ai répondu : 'Parce que je choisis mes moments de connexion.' Elle a souri. Elle comprend.",
         "publishedAt": "2026-02-02T18:00:00Z",
         "likes": 634,
-        "isArchived": false
+        "style": "wellness"
     },
     {
         "id": "cap_008",
-        "author": "Hugo T.",
-        "avatar": "🎵",
-        "content": "BeReal voulait l'authenticité mais créait l'anxiété. Slow Social a compris : le timing compte. 18h00 dimanche, c'est notre rendez-vous. Pas d'intrusion, pas de FOMO négatif.",
+        "author": "Anonyme",
+        "avatar": "💔",
+        "content": "Cher journal. Elle est partie. J'ai gardé son pull. Je dors dedans parfois. C'est pathétique. Je m'en fiche. Il sent encore son parfum. Je ne le laverai jamais.",
         "publishedAt": "2026-02-02T18:00:00Z",
-        "likes": 198,
-        "isArchived": false
+        "likes": 523,
+        "style": "journal"
     },
     {
         "id": "cap_009",
-        "author": "Léa G.",
-        "avatar": "🌻",
-        "content": "J'ai écrit cette pensée mardi. Je l'ai modifiée mercredi. Peaufinée vendredi. Dimanche, elle était prête. Ce processus de maturation change tout. Fini les posts impulsifs regrettés.",
+        "author": "Léo K.",
+        "avatar": "📊",
+        "content": "BILAN DE MA SEMAINE: 2 cafés renversés. 1 réunion évitée. 47 mails ignorés. 3 mensonges à ma mère sur ma santé. 1 pizza à 23h. 0 regret. Vivement dimanche prochain.",
         "publishedAt": "2026-02-02T18:00:00Z",
-        "likes": 287,
-        "isArchived": false
+        "likes": 678,
+        "style": "calendrier"
     },
     {
         "id": "cap_010",
         "author": "Marc F.",
         "avatar": "🏔️",
-        "content": "Minus limitait à 100 posts à vie. Trop extrême, trop frustrant. Slow Social comprend : ce n'est pas de moins publier qu'on a besoin, c'est de mieux publier. La cadence hebdomadaire est parfaite.",
+        "content": "Minus limitait à 100 posts à vie. Trop extrême, trop frustrant. Slow Social comprend : ce n'est pas de moins publier qu'on a besoin, c'est de mieux publier.",
         "publishedAt": "2026-02-02T18:00:00Z",
         "likes": 345,
-        "isArchived": false
+        "style": "wellness"
     },
     {
         "id": "cap_011",
-        "author": "Camille H.",
-        "avatar": "✨",
-        "content": "Le dimanche soir, je partage ma capsule sur Instagram avec un simple lien. 'Retrouvez mon rituel complet sur Slow Social.' La curiosité fait le reste. 47 nouveaux membres ce mois-ci.",
+        "author": "Gérard",
+        "avatar": "🥖",
+        "content": "Mon voisin fait du bruit à 7h du matin. Tous les jours. J'ai décidé de le tuer. Avec gentillesse. Je lui apporte des croissants. Maintenant IL ne dort plus. Check mate.",
         "publishedAt": "2026-02-02T18:00:00Z",
-        "likes": 412,
-        "isArchived": false
+        "likes": 1456,
+        "style": "wtf"
     },
     {
         "id": "cap_012",
-        "author": "Paul N.",
-        "avatar": "🎭",
-        "content": "Les archives disparaissent après 24h pour les non-abonnés. Au début, ça m'a frustré. Puis j'ai compris : l'éphémère crée la valeur. Ce qui reste accessible perd son pouvoir.",
+        "author": "Luna",
+        "avatar": "🌙",
+        "content": "3h17. Je ne sais plus si j'écris pour être lue ou pour me prouver que j'existe. Ce soir, la lune est belle. Mon chat ronfle. C'est peut-être ça, le bonheur.",
         "publishedAt": "2026-02-02T18:00:00Z",
-        "likes": 156,
-        "isArchived": false
+        "likes": 389,
+        "style": "journal"
     },
     {
         "id": "cap_013",
-        "author": "Julie C.",
-        "avatar": "🌊",
-        "content": "Mon équipe marketing a adopté Slow Social pour nos communications internes. Une synthèse par semaine. Fini les 200 messages Slack quotidiens. La productivité a bondi de 30%.",
+        "author": "Paul",
+        "avatar": "🗓️",
+        "content": "SEMAINE 5/52: Tentatives de méditation: 7. Méditations réussies: 0. Fois où j'ai pensé à démissionner: 14. Démissions: 0. Plants de basilic tués: 2. C'est quand les vacances?",
         "publishedAt": "2026-02-02T18:00:00Z",
-        "likes": 389,
-        "isArchived": false
+        "likes": 723,
+        "style": "calendrier"
     },
     {
         "id": "cap_014",
-        "author": "Nicolas B.",
-        "avatar": "🔥",
-        "content": "Je suis influenceur 'Slow Life'. Je ne publie QUE sur Slow Social. Mes 50K followers attendent le dimanche. Cette exclusivité a doublé mon engagement. La rareté réveille l'attention.",
+        "author": "Sandrine",
+        "avatar": "🐸",
+        "content": "J'ai adopté une grenouille. Je l'ai appelée François. François ne bouge pas beaucoup. J'ai peur que François soit une pierre. Je l'aime quand même.",
         "publishedAt": "2026-02-02T18:00:00Z",
-        "likes": 723,
-        "isArchived": false
+        "likes": 2134,
+        "style": "wtf"
     },
     {
         "id": "cap_015",
         "author": "Isabelle R.",
         "avatar": "🌸",
-        "content": "Dimanche dernier, j'ai pleuré en lisant la capsule de ma mère. Elle y parlait de son jardin, de ses tomates, du temps qui passe. Sans algorithme pour nous séparer. Juste nous, une fois par semaine.",
+        "content": "Dimanche dernier, j'ai pleuré en lisant la capsule de ma mère. Elle y parlait de son jardin, de ses tomates, du temps qui passe. Sans algorithme pour nous séparer. Juste nous.",
         "publishedAt": "2026-02-02T18:00:00Z",
         "likes": 892,
-        "isArchived": false
+        "style": "wellness"
     }
 ]
