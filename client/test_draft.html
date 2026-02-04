@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Slow Social draft Test</title>
+    <script src="DraftManager.js"></script>
+    <style>
+        body { font-family: sans-serif; padding: 20px; }
+        .log { background: #f0f0f0; padding: 10px; border-radius: 5px; }
+    </style>
+</head>
+<body>
+    <h1>Draft Manager Test</h1>
+    <p>Open console to see details.</p>
+    <button onclick="testSave()">Test Save Draft</button>
+    <button onclick="testPublish()">Test Publish (Sunday Check)</button>
+    <div id="output" class="log"></div>
+
+    <script>
+        const manager = new DraftManager();
+        const output = document.getElementById('output');
+
+        function log(msg) {
+            output.innerHTML += `<div>${new Date().toLocaleTimeString()}: ${msg}</div>`;
+            console.log(msg);
+        }
+
+        function testSave() {
+            const draft = manager.saveDraft("Test draft content " + Date.now());
+            log(`Saved draft ID: ${draft.id}`);
+        }
+
+        function testPublish() {
+            const drafts = manager.getAllDrafts();
+            if (drafts.length === 0) {
+                log("No drafts to publish.");
+                return;
+            }
+            const result = manager.publishDraft(drafts[0].id);
+            log(`Publish result: ${result.message}`);
+        }
+    </script>
+</body>
+</html>
