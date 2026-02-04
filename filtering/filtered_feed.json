@@ -1,73 +1,31 @@
 [
   {
-    "id": "post_1",
-    "text": "Here is some interesting content about AI. #tech #growth",
-    "source": "Twitter",
+    "id": "https://www.futura-sciences.com/tech/actualites/technologie-declic-chercheurs-ia-apprend-comme-nous-gaspiller-w2t8-130678/#xtor%3DRSS-8",
+    "text": "Le déclic des chercheurs : une IA qui apprend comme nous, sans gaspiller - Aux États-Unis, des chercheurs ont trouvé une nouvelle approche pour rendre les réseaux neuronaux utilisés par les intelligences artificielles plus efficaces. En intégrant une mémoire de travail à tra...",
+    "source": "Futura Tech",
     "metadata": {
-      "author": "User_1",
-      "original_timestamp": 1770205310.5173976
-    },
-    "relevanceScore": 99,
-    "category": "High Value",
-    "reasoning": "Relevant to user interests"
-  },
-  {
-    "id": "post_3",
-    "text": "Here is some interesting content about Rust. #tech #growth",
-    "source": "LinkedIn",
-    "metadata": {
-      "author": "User_3",
-      "original_timestamp": 1770205310.5173976
-    },
-    "relevanceScore": 93,
-    "category": "High Value",
-    "reasoning": "Relevant to user interests"
-  },
-  {
-    "id": "post_5",
-    "text": "Here is some interesting content about Rust. #tech #growth",
-    "source": "Twitter",
-    "metadata": {
-      "author": "User_5",
-      "original_timestamp": 1770205310.5173976
-    },
-    "relevanceScore": 78,
-    "category": "High Value",
-    "reasoning": "Relevant to user interests"
-  },
-  {
-    "id": "post_14",
-    "text": "Here is some interesting content about AI. #tech #growth",
-    "source": "Twitter",
-    "metadata": {
-      "author": "User_14",
-      "original_timestamp": 1770205310.5173976
-    },
-    "relevanceScore": 83,
-    "category": "High Value",
-    "reasoning": "Relevant to user interests"
-  },
-  {
-    "id": "post_17",
-    "text": "Here is some interesting content about Rust. #tech #growth",
-    "source": "RSS_Tech",
-    "metadata": {
-      "author": "User_17",
-      "original_timestamp": 1770205310.5173976
-    },
-    "relevanceScore": 92,
-    "category": "High Value",
-    "reasoning": "Relevant to user interests"
-  },
-  {
-    "id": "post_18",
-    "text": "Here is some interesting content about Rust. #tech #growth",
-    "source": "RSS_Tech",
-    "metadata": {
-      "author": "User_18",
-      "original_timestamp": 1770205310.5173976
+      "author": "Edward Back, Journaliste hi-tech",
+      "original_timestamp": 1770138000,
+      "extra": {
+        "link": "https://www.futura-sciences.com/tech/actualites/technologie-declic-chercheurs-ia-apprend-comme-nous-gaspiller-w2t8-130678/#xtor%3DRSS-8"
+      }
     },
     "relevanceScore": 77,
+    "category": "High Value",
+    "reasoning": "Relevant to user interests"
+  },
+  {
+    "id": "https://www.futura-sciences.com/tech/actualites/guerre-futur-missiles-russes-pres-europe-france-sort-enfin-son-retard-programme-jewel-130868/#xtor%3DRSS-8",
+    "text": "Missiles russes près de l’Europe : la France sort enfin de son retard avec le programme Jewel - Avec un allié dont on peut légitimement douter et l'émergence de nouvelles menaces liées à l’usage de missiles balistiques à portée intermédiaire ou prétendument hypersoniques russes, la France et l’A...",
+    "source": "Futura Tech",
+    "metadata": {
+      "author": "Sylvain Biget, Journaliste, télépilote professionnel de drones et réalisateur de documentaires",
+      "original_timestamp": 1770124093,
+      "extra": {
+        "link": "https://www.futura-sciences.com/tech/actualites/guerre-futur-missiles-russes-pres-europe-france-sort-enfin-son-retard-programme-jewel-130868/#xtor%3DRSS-8"
+      }
+    },
+    "relevanceScore": 97,
     "category": "High Value",
     "reasoning": "Relevant to user interests"
   }

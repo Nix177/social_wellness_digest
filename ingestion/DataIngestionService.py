@@ -3,38 +3,86 @@ import time
 import random
 from typing import List, Dict
 
-# Simulating external dependencies
-# import requests 
+try:
+    import feedparser
+except ImportError:
+    print("Warning: feedparser not installed. Falling back to mock data.")
+    feedparser = None
 
 class DataIngestionService:
     def __init__(self, sources: List[str]):
         self.sources = sources
+        self.rss_urls = {
+            "Techno-Science": "https://www.techno-science.net/rss.xml",
+            "Hacker News": "https://news.ycombinator.com/rss",
+            "Futura Tech": "https://www.futura-sciences.com/rss/high-tech/actualites.xml"
+        }
+
+    def fetch_rss(self, url: str, source_name: str) -> List[Dict]:
+        """Fetches data from a real RSS feed."""
+        if not feedparser:
+            return []
+        
+        print(f"  - Requesting {source_name} ({url})...")
+        feed = feedparser.parse(url)
+        posts = []
+        
+        for entry in feed.entries[:5]: # Top 5 per feed
+            # Clean up struct_time to float timestamp
+            if hasattr(entry, 'published_parsed') and entry.published_parsed:
+                timestamp = time.mktime(entry.published_parsed)
+            else:
+                timestamp = time.time()
+
+            posts.append({
+                "id": entry.get('id', entry.get('link', str(random.randint(1000,9999)))),
+                "source": source_name,
+                "content": f"{entry.title} - {entry.get('summary', '')[:200]}...",
+                "author": entry.get('author', 'Unknown'),
+                "timestamp": timestamp,
+                "raw_metadata": {"link": entry.link}
+            })
+        return posts
+
+    def fetch_mock(self) -> List[Dict]:
+        """Fallback mock data."""
+        raw_data = []
+        topics = ["Biohacking", "Digital Minimalist", "Rust Programming", "Obsidian Workflows", "Neuromorphic Computing"]
+        
+        for i in range(5):
+            topic = random.choice(topics)
+            raw_data.append({
+                "id": f"mock_{i}",
+                "source": "MockStream",
+                "content": f"Discovering the benefits of {topic} for mental clarity. #wellness #tech",
+                "author": f"WellnessBot_{i}",
+                "timestamp": time.time(),
+                "raw_metadata": {"likes": random.randint(0, 100)}
+            })
+        return raw_data
 
     def fetch_data(self) -> List[Dict]:
         """
-        Simulates fetching data from configured sources (X, LinkedIn, RSS).
-        In a real scenario, this would handle pagination and rate limits.
+        Main fetcher: tries RSS, falls back or adds to mock.
         """
-        print(f"Fetching data from: {', '.join(self.sources)}...")
-        # Simulate network delay
-        time.sleep(1)
+        print("Starting Data Ingestion...")
+        all_data = []
         
-        # Mock data generation
-        raw_data = []
-        topics = ["AI", "Burnout", "Productivity", "Marketing", "Rust", "Python", "Mental Health"]
+        # 1. Try Real RSS
+        if feedparser:
+            for name, url in self.rss_urls.items():
+                try:
+                    all_data.extend(self.fetch_rss(url, name))
+                except Exception as e:
+                    print(f"Error fetching {name}: {e}")
         
-        for i in range(20):
-            topic = random.choice(topics)
-            raw_data.append({
-                "id": f"post_{i}",
-                "source": random.choice(self.sources),
-                "content": f"Here is some interesting content about {topic}. #tech #growth",
-                "author": f"User_{i}",
-                "timestamp": time.time(),
-                "raw_metadata": {"likes": random.randint(0, 100), "retweets": random.randint(0, 20)}
-            })
+        # 2. Add Mock Data (mixed in) or acts as fallback
+        if not all_data:
+            print("No RSS data found. Generating mock data.")
+            all_data.extend(self.fetch_mock())
             
-        return raw_data
+        print(f"Total items fetched: {len(all_data)}")
+        return all_data
 
     def standardize_data(self, raw_data: List[Dict]) -> List[Dict]:
         """
@@ -48,7 +96,8 @@ class DataIngestionService:
                 "source": item["source"],
                 "metadata": {
                     "author": item["author"],
-                    "original_timestamp": item["timestamp"]
+                    "original_timestamp": item["timestamp"],
+                    "extra": item.get("raw_metadata", {})
                 }
             })
         return standardized
@@ -59,7 +108,7 @@ class DataIngestionService:
         print(f"Saved {len(data)} items to {filename}")
 
 if __name__ == "__main__":
-    sources = ["Twitter", "LinkedIn", "RSS_Tech"]
+    sources = ["RSS"] # Placeholder
     service = DataIngestionService(sources)
     
     raw_posts = service.fetch_data()
