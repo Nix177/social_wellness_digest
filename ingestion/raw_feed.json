@@ -62,6 +62,30 @@
     }
   },
   {
+    "id": "https://occupywallst.com/yen",
+    "text": "The Great Unwind - <a href=\"https://news.ycombinator.com/item?id=46889008\">Comments</a>...",
+    "source": "Hacker News",
+    "metadata": {
+      "author": "Unknown",
+      "original_timestamp": 1770223766.0,
+      "extra": {
+        "link": "https://occupywallst.com/yen"
+      }
+    }
+  },
+  {
+    "id": "https://www.lrb.co.uk/blog/2026/january/in-tehran",
+    "text": "In Tehran - <a href=\"https://news.ycombinator.com/item?id=46888498\">Comments</a>...",
+    "source": "Hacker News",
+    "metadata": {
+      "author": "Unknown",
+      "original_timestamp": 1770221658.0,
+      "extra": {
+        "link": "https://www.lrb.co.uk/blog/2026/january/in-tehran"
+      }
+    }
+  },
+  {
     "id": "https://news.uark.edu/articles/80669/emotional-support-from-social-media-found-to-reduce-anxiety",
     "text": "Study: emotional support from social media found to reduce anxiety - <a href=\"https://news.ycombinator.com/item?id=46888532\">Comments</a>...",
     "source": "Hacker News",
@@ -86,26 +110,14 @@
     }
   },
   {
-    "id": "https://www.lrb.co.uk/blog/2026/january/in-tehran",
-    "text": "In Tehran - <a href=\"https://news.ycombinator.com/item?id=46888498\">Comments</a>...",
-    "source": "Hacker News",
+    "id": "https://www.futura-sciences.com/tech/actualites/tech-100-fois-plus-rapide-prototype-ia-pourrait-tout-bouleverser-w2t8-130780/#xtor%3DRSS-8",
+    "text": "100 fois plus rapide : le prototype IA qui pourrait tout bouleverser - Comment r\u00e9duire la facture \u00e9nerg\u00e9tique des IA tout en am\u00e9liorant leur capacit\u00e9 ? En calculant gr\u00e2ce \u00e0 la lumi\u00e8re ! C\u2019est le challenge qu\u2019ont relev\u00e9 des chercheurs am\u00e9ricains avec une puce m\u00ealant des c...",
+    "source": "Futura Tech",
     "metadata": {
-      "author": "Unknown",
-      "original_timestamp": 1770221658.0,
+      "author": "Sylvain Biget, Journaliste, t\u00e9l\u00e9pilote professionnel de drones et r\u00e9alisateur de documentaires",
+      "original_timestamp": 1770224400.0,
       "extra": {
-        "link": "https://www.lrb.co.uk/blog/2026/january/in-tehran"
-      }
-    }
-  },
-  {
-    "id": "https://incoherency.co.uk/blog/stories/tractor.html",
-    "text": "Tractor - <a href=\"https://news.ycombinator.com/item?id=46877278\">Comments</a>...",
-    "source": "Hacker News",
-    "metadata": {
-      "author": "Unknown",
-      "original_timestamp": 1770149099.0,
-      "extra": {
-        "link": "https://incoherency.co.uk/blog/stories/tractor.html"
+        "link": "https://www.futura-sciences.com/tech/actualites/tech-100-fois-plus-rapide-prototype-ia-pourrait-tout-bouleverser-w2t8-130780/#xtor%3DRSS-8"
       }
     }
   },
@@ -154,18 +166,6 @@
       "original_timestamp": 1770133395.0,
       "extra": {
         "link": "https://www.futura-sciences.com/tech/actualites/tech-fest-tech-fest-2026-grand-rendez-vous-innovation-ouvre-enjeu-cle-130872/#xtor%3DRSS-8"
-      }
-    }
-  },
-  {
-    "id": "https://www.futura-sciences.com/tech/actualites/guerre-futur-missiles-russes-pres-europe-france-sort-enfin-son-retard-programme-jewel-130868/#xtor%3DRSS-8",
-    "text": "Missiles russes pr\u00e8s de l\u2019Europe : la France sort enfin de son retard avec le programme Jewel - Avec\u00a0un alli\u00e9 dont on peut l\u00e9gitimement\u00a0douter et\u00a0l'\u00e9mergence de nouvelles menaces li\u00e9es \u00e0 l\u2019usage de missiles balistiques \u00e0 port\u00e9e interm\u00e9diaire ou pr\u00e9tendument hypersoniques russes, la France et l\u2019A...",
-    "source": "Futura Tech",
-    "metadata": {
-      "author": "Sylvain Biget, Journaliste, t\u00e9l\u00e9pilote professionnel de drones et r\u00e9alisateur de documentaires",
-      "original_timestamp": 1770124093.0,
-      "extra": {
-        "link": "https://www.futura-sciences.com/tech/actualites/guerre-futur-missiles-russes-pres-europe-france-sort-enfin-son-retard-programme-jewel-130868/#xtor%3DRSS-8"
       }
     }
   }

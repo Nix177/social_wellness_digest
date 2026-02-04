@@ -44,7 +44,7 @@ def main():
     print("="*50)
     
     # Optional: Open the result
-    result_file = os.path.join(base_dir, "weekly_digest.html")
+    result_file = os.path.join(base_dir, "index.html")
     if os.path.exists(result_file):
         print(f"Opening {result_file}...")
         if sys.platform == "win32":

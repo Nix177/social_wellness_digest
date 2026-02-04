@@ -7,7 +7,7 @@ import shutil
 class SundayPushService:
     def __init__(self, dry_run=False):
         self.base_dir = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
-        self.digest_path = os.path.join(self.base_dir, "weekly_digest.html")
+        self.digest_path = os.path.join(self.base_dir, "index.html")
         self.archive_dir = os.path.join(self.base_dir, "archiving")
         
         self.dry_run = dry_run
