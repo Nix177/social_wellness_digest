@@ -701,18 +701,8 @@
         // ============================================
         function renderFeed() {
             const container = document.getElementById('feed-container');
-            const canView = demoMode || isSundayWindow();
-
-            if (!canView) {
-                container.innerHTML = `
-                    <div class="empty-state">
-                        <div class="empty-icon">🌙</div>
-                        <p>Le flux s'éveille dimanche à 18h00 UTC.</p>
-                        <p style="font-size: 0.85rem; margin-top: 10px;">En attendant, prenez le temps d'écrire.</p>
-                    </div>
-                `;
-                return;
-            }
+            // INVESTOR MODE: Always show feed content
+            // Only publishing is locked (not viewing)
 
             // Combine seed capsules with user-published ones
             const userPublished = manager.getAllDrafts()
