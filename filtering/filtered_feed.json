@@ -1,1 +1,41 @@
-[]
+[
+  {
+    "id": "seed_001",
+    "text": "Why 'Slow Productivity' is the Answer to Burnout. In a world of constant pings, Cal Newport argues for doing fewer things at clarity. Deep work is the new superpower. #burnout #focus",
+    "source": "Digital Minimalist",
+    "metadata": {
+      "author": "Cal Newport",
+      "original_timestamp": 1738771200,
+      "extra": {}
+    },
+    "relevanceScore": 90,
+    "category": "High Value",
+    "reasoning": "Relevant to wellness topics: burnout, focus, deep work"
+  },
+  {
+    "id": "seed_002",
+    "text": "The Age of AI Surveillance: How privacy is becoming a luxury item. New algorithms track emotional states in real-time. We need a new ethics for the digital age. #privacy #ethics",
+    "source": "The Atlantic",
+    "metadata": {
+      "author": "Karen Hao",
+      "original_timestamp": 1738764000,
+      "extra": {}
+    },
+    "relevanceScore": 90,
+    "category": "High Value",
+    "reasoning": "Relevant to wellness topics: privacy, surveillance, ethics"
+  },
+  {
+    "id": "seed_005",
+    "text": "Dopamine Fasting 2.0: Silicon Valley's latest trend or actual science? Identifying addictive triggers in UX design. #dopamine #addiction",
+    "source": "Wired",
+    "metadata": {
+      "author": "Anna Wi.",
+      "original_timestamp": 1738730000,
+      "extra": {}
+    },
+    "relevanceScore": 80,
+    "category": "High Value",
+    "reasoning": "Relevant to wellness topics: addiction, dopamine"
+  }
+]

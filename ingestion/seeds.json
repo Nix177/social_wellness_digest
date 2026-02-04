@@ -1,0 +1,42 @@
+[
+    {
+        "id": "seed_001",
+        "source": "Digital Minimalist",
+        "content": "Why 'Slow Productivity' is the Answer to Burnout. In a world of constant pings, Cal Newport argues for doing fewer things at clarity. Deep work is the new superpower. #burnout #focus",
+        "author": "Cal Newport",
+        "timestamp": 1738771200,
+        "raw_metadata": {}
+    },
+    {
+        "id": "seed_002",
+        "source": "The Atlantic",
+        "content": "The Age of AI Surveillance: How privacy is becoming a luxury item. New algorithms track emotional states in real-time. We need a new ethics for the digital age. #privacy #ethics",
+        "author": "Karen Hao",
+        "timestamp": 1738764000,
+        "raw_metadata": {}
+    },
+    {
+        "id": "seed_003",
+        "source": "Nature Journal",
+        "content": "Spending just 20 minutes in nature lowers cortisol levels by 15%. The science of forest bathing (Shinrin-yoku) is undeniable. Disconnect to reconnect. #nature #mentalhealth",
+        "author": "Dr. S. Li",
+        "timestamp": 1738750000,
+        "raw_metadata": {}
+    },
+    {
+        "id": "seed_004",
+        "source": "Rust Magazine",
+        "content": "Rust vs C++: Memory Safety as a Moral Imperative. How choosing the right language prevents security vulnerabilities and reduces developer anxiety. #rust #tech",
+        "author": "Steve K.",
+        "timestamp": 1738740000,
+        "raw_metadata": {}
+    },
+    {
+        "id": "seed_005",
+        "source": "Wired",
+        "content": "Dopamine Fasting 2.0: Silicon Valley's latest trend or actual science? Identifying addictive triggers in UX design. #dopamine #addiction",
+        "author": "Anna Wi.",
+        "timestamp": 1738730000,
+        "raw_metadata": {}
+    }
+]

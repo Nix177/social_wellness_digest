@@ -20,6 +20,15 @@ class TestDataIngestion(unittest.TestCase):
         self.assertIn("content", first_item)
         self.assertEqual(first_item["source"], "MockStream")
 
+    def test_load_seeds(self):
+        """Test that seeds are loaded (if file exists) or handled gracefully."""
+        # This test assumes seeds.json might or might not exist in test env, 
+        # but the method should return a list regardless.
+        seeds = self.service.load_seeds()
+        self.assertIsInstance(seeds, list)
+        if len(seeds) > 0:
+            self.assertIn("source", seeds[0])
+
     def test_standardization(self):
         """Test that data standardization works correctly."""
         raw_input = [{

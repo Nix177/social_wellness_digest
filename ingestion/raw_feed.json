@@ -1,5 +1,55 @@
 [
   {
+    "id": "seed_001",
+    "text": "Why 'Slow Productivity' is the Answer to Burnout. In a world of constant pings, Cal Newport argues for doing fewer things at clarity. Deep work is the new superpower. #burnout #focus",
+    "source": "Digital Minimalist",
+    "metadata": {
+      "author": "Cal Newport",
+      "original_timestamp": 1738771200,
+      "extra": {}
+    }
+  },
+  {
+    "id": "seed_002",
+    "text": "The Age of AI Surveillance: How privacy is becoming a luxury item. New algorithms track emotional states in real-time. We need a new ethics for the digital age. #privacy #ethics",
+    "source": "The Atlantic",
+    "metadata": {
+      "author": "Karen Hao",
+      "original_timestamp": 1738764000,
+      "extra": {}
+    }
+  },
+  {
+    "id": "seed_003",
+    "text": "Spending just 20 minutes in nature lowers cortisol levels by 15%. The science of forest bathing (Shinrin-yoku) is undeniable. Disconnect to reconnect. #nature #mentalhealth",
+    "source": "Nature Journal",
+    "metadata": {
+      "author": "Dr. S. Li",
+      "original_timestamp": 1738750000,
+      "extra": {}
+    }
+  },
+  {
+    "id": "seed_004",
+    "text": "Rust vs C++: Memory Safety as a Moral Imperative. How choosing the right language prevents security vulnerabilities and reduces developer anxiety. #rust #tech",
+    "source": "Rust Magazine",
+    "metadata": {
+      "author": "Steve K.",
+      "original_timestamp": 1738740000,
+      "extra": {}
+    }
+  },
+  {
+    "id": "seed_005",
+    "text": "Dopamine Fasting 2.0: Silicon Valley's latest trend or actual science? Identifying addictive triggers in UX design. #dopamine #addiction",
+    "source": "Wired",
+    "metadata": {
+      "author": "Anna Wi.",
+      "original_timestamp": 1738730000,
+      "extra": {}
+    }
+  },
+  {
     "id": "https://mistral.ai/news/voxtral-transcribe-2",
     "text": "Voxtral Transcribe 2 - <a href=\"https://news.ycombinator.com/item?id=46886735\">Comments</a>...",
     "source": "Hacker News",
@@ -8,6 +58,18 @@
       "original_timestamp": 1770214097.0,
       "extra": {
         "link": "https://mistral.ai/news/voxtral-transcribe-2"
+      }
+    }
+  },
+  {
+    "id": "https://news.uark.edu/articles/80669/emotional-support-from-social-media-found-to-reduce-anxiety",
+    "text": "Study: emotional support from social media found to reduce anxiety - <a href=\"https://news.ycombinator.com/item?id=46888532\">Comments</a>...",
+    "source": "Hacker News",
+    "metadata": {
+      "author": "Unknown",
+      "original_timestamp": 1770221804.0,
+      "extra": {
+        "link": "https://news.uark.edu/articles/80669/emotional-support-from-social-media-found-to-reduce-anxiety"
       }
     }
   },
@@ -24,14 +86,14 @@
     }
   },
   {
-    "id": "https://brandon.wang/2026/clawdbot",
-    "text": "A sane but bull case on Clawdbot / OpenClaw - <a href=\"https://news.ycombinator.com/item?id=46872465\">Comments</a>...",
+    "id": "https://www.lrb.co.uk/blog/2026/january/in-tehran",
+    "text": "In Tehran - <a href=\"https://news.ycombinator.com/item?id=46888498\">Comments</a>...",
     "source": "Hacker News",
     "metadata": {
       "author": "Unknown",
-      "original_timestamp": 1770130030.0,
+      "original_timestamp": 1770221658.0,
       "extra": {
-        "link": "https://brandon.wang/2026/clawdbot"
+        "link": "https://www.lrb.co.uk/blog/2026/january/in-tehran"
       }
     }
   },
@@ -44,18 +106,6 @@
       "original_timestamp": 1770149099.0,
       "extra": {
         "link": "https://incoherency.co.uk/blog/stories/tractor.html"
-      }
-    }
-  },
-  {
-    "id": "https://www.perl.com/article/fastmail-donates-usd-10-000-to-the-perl-and-raku-foundation/",
-    "text": "Fastmail Donates USD 10k to the Perl and Raku Foundation - <a href=\"https://news.ycombinator.com/item?id=46888454\">Comments</a>...",
-    "source": "Hacker News",
-    "metadata": {
-      "author": "Unknown",
-      "original_timestamp": 1770221437.0,
-      "extra": {
-        "link": "https://www.perl.com/article/fastmail-donates-usd-10-000-to-the-perl-and-raku-foundation/"
       }
     }
   },

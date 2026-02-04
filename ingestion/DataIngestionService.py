@@ -1,5 +1,6 @@
 import json
 import time
+import os
 import random
 from typing import List, Dict
 
@@ -61,6 +62,18 @@ class DataIngestionService:
             })
         return raw_data
 
+    def load_seeds(self) -> List[Dict]:
+        """Loads vetted seed content."""
+        seed_path = os.path.join(os.path.dirname(__file__), 'seeds.json')
+        if os.path.exists(seed_path):
+            try:
+                with open(seed_path, 'r', encoding='utf-8') as f:
+                    print(f"  - Loading seed content from {seed_path}...")
+                    return json.load(f)
+            except Exception as e:
+                print(f"Error loading seeds: {e}")
+        return []
+
     def fetch_data(self) -> List[Dict]:
         """
         Main fetcher: tries RSS, falls back or adds to mock.
@@ -68,7 +81,10 @@ class DataIngestionService:
         print("Starting Data Ingestion...")
         all_data = []
         
-        # 1. Try Real RSS
+        # 1. Load Seeds (Always include these for Demo/Pre-fill)
+        all_data.extend(self.load_seeds())
+
+        # 2. Try Real RSS
         if feedparser:
             for name, url in self.rss_urls.items():
                 try:
@@ -76,9 +92,9 @@ class DataIngestionService:
                 except Exception as e:
                     print(f"Error fetching {name}: {e}")
         
-        # 2. Add Mock Data (mixed in) or acts as fallback
-        if not all_data:
-            print("No RSS data found. Generating mock data.")
+        # 3. Add Mock Data (only if total is low)
+        if len(all_data) < 3:
+            print("Low data volume. Generating mock data.")
             all_data.extend(self.fetch_mock())
             
         print(f"Total items fetched: {len(all_data)}")
