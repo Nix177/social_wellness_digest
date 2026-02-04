@@ -1,0 +1,16 @@
+{
+    "user_id": "u_12345",
+    "preferences": {
+        "topics": ["AI", "Minimalism", "Neuroscience", "Startup Growth"],
+        "excludes": ["Politics", "Clickbait", "Ads"],
+        "max_daily_time": 15
+    },
+    "filter_settings": {
+        "min_relevance_score": 75,
+        "model": "gpt-4-turbo"
+    },
+    "viral_loop": {
+        "shared_config_id": "config_88a9s8d",
+        "allow_remix": true
+    }
+}
