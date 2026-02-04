@@ -1,0 +1,137 @@
+[
+    {
+        "id": "cap_001",
+        "author": "Marie L.",
+        "avatar": "🌿",
+        "content": "Cette semaine, j'ai éteint mon téléphone pendant 4 heures chaque jour. Le silence est devenu mon luxe. Le monde ne s'est pas effondré. Au contraire, j'ai redécouvert le plaisir de lire sans notifications.",
+        "publishedAt": "2026-02-02T18:00:00Z",
+        "likes": 234,
+        "isArchived": false
+    },
+    {
+        "id": "cap_002",
+        "author": "Thomas D.",
+        "avatar": "☕",
+        "content": "Dimanche, 17h58. Je regarde mes pensées de la semaine s'accumuler. Ce moment de publication est devenu sacré. Pas de scroll infini, juste cette fenêtre unique. C'est ça, le slow social.",
+        "publishedAt": "2026-02-02T18:00:00Z",
+        "likes": 189,
+        "isArchived": false
+    },
+    {
+        "id": "cap_003",
+        "author": "Claire B.",
+        "avatar": "🎨",
+        "content": "Mon rituel dominical : un thé, une bougie, et 20 minutes pour relire tout ce que j'ai écrit cette semaine. La plupart ne sera jamais publié. Et c'est très bien ainsi. L'essentiel reste.",
+        "publishedAt": "2026-02-02T18:00:00Z",
+        "likes": 312,
+        "isArchived": false
+    },
+    {
+        "id": "cap_004",
+        "author": "Antoine R.",
+        "avatar": "🌅",
+        "content": "J'ai quitté Instagram il y a 3 mois. Slow Social est la seule plateforme où je partage encore. Une fois par semaine, avec intention. Mes amis attendent mes capsules. Cette rareté a recréé du désir.",
+        "publishedAt": "2026-02-02T18:00:00Z",
+        "likes": 456,
+        "isArchived": false
+    },
+    {
+        "id": "cap_005",
+        "author": "Sophie M.",
+        "avatar": "📚",
+        "content": "Avant, je publiais 15 stories par jour. Aujourd'hui, je rédige une seule pensée pendant 7 jours. La qualité a remplacé la quantité. Mon audience a diminué. Ma satisfaction a explosé.",
+        "publishedAt": "2026-02-02T18:00:00Z",
+        "likes": 278,
+        "isArchived": false
+    },
+    {
+        "id": "cap_006",
+        "author": "Lucas P.",
+        "avatar": "🌙",
+        "content": "Le burnout numérique m'a frappé l'an dernier. 63% des community managers sont touchés. Slow Social n'est pas une app, c'est une thérapie. Une publication par semaine, c'est humain.",
+        "publishedAt": "2026-02-02T18:00:00Z",
+        "likes": 521,
+        "isArchived": false
+    },
+    {
+        "id": "cap_007",
+        "author": "Emma V.",
+        "avatar": "🦋",
+        "content": "Mon enfant m'a demandé pourquoi je ne regardais plus mon téléphone le dimanche soir. J'ai répondu : 'Parce que je choisis mes moments de connexion.' Elle a souri. Elle comprend.",
+        "publishedAt": "2026-02-02T18:00:00Z",
+        "likes": 634,
+        "isArchived": false
+    },
+    {
+        "id": "cap_008",
+        "author": "Hugo T.",
+        "avatar": "🎵",
+        "content": "BeReal voulait l'authenticité mais créait l'anxiété. Slow Social a compris : le timing compte. 18h00 dimanche, c'est notre rendez-vous. Pas d'intrusion, pas de FOMO négatif.",
+        "publishedAt": "2026-02-02T18:00:00Z",
+        "likes": 198,
+        "isArchived": false
+    },
+    {
+        "id": "cap_009",
+        "author": "Léa G.",
+        "avatar": "🌻",
+        "content": "J'ai écrit cette pensée mardi. Je l'ai modifiée mercredi. Peaufinée vendredi. Dimanche, elle était prête. Ce processus de maturation change tout. Fini les posts impulsifs regrettés.",
+        "publishedAt": "2026-02-02T18:00:00Z",
+        "likes": 287,
+        "isArchived": false
+    },
+    {
+        "id": "cap_010",
+        "author": "Marc F.",
+        "avatar": "🏔️",
+        "content": "Minus limitait à 100 posts à vie. Trop extrême, trop frustrant. Slow Social comprend : ce n'est pas de moins publier qu'on a besoin, c'est de mieux publier. La cadence hebdomadaire est parfaite.",
+        "publishedAt": "2026-02-02T18:00:00Z",
+        "likes": 345,
+        "isArchived": false
+    },
+    {
+        "id": "cap_011",
+        "author": "Camille H.",
+        "avatar": "✨",
+        "content": "Le dimanche soir, je partage ma capsule sur Instagram avec un simple lien. 'Retrouvez mon rituel complet sur Slow Social.' La curiosité fait le reste. 47 nouveaux membres ce mois-ci.",
+        "publishedAt": "2026-02-02T18:00:00Z",
+        "likes": 412,
+        "isArchived": false
+    },
+    {
+        "id": "cap_012",
+        "author": "Paul N.",
+        "avatar": "🎭",
+        "content": "Les archives disparaissent après 24h pour les non-abonnés. Au début, ça m'a frustré. Puis j'ai compris : l'éphémère crée la valeur. Ce qui reste accessible perd son pouvoir.",
+        "publishedAt": "2026-02-02T18:00:00Z",
+        "likes": 156,
+        "isArchived": false
+    },
+    {
+        "id": "cap_013",
+        "author": "Julie C.",
+        "avatar": "🌊",
+        "content": "Mon équipe marketing a adopté Slow Social pour nos communications internes. Une synthèse par semaine. Fini les 200 messages Slack quotidiens. La productivité a bondi de 30%.",
+        "publishedAt": "2026-02-02T18:00:00Z",
+        "likes": 389,
+        "isArchived": false
+    },
+    {
+        "id": "cap_014",
+        "author": "Nicolas B.",
+        "avatar": "🔥",
+        "content": "Je suis influenceur 'Slow Life'. Je ne publie QUE sur Slow Social. Mes 50K followers attendent le dimanche. Cette exclusivité a doublé mon engagement. La rareté réveille l'attention.",
+        "publishedAt": "2026-02-02T18:00:00Z",
+        "likes": 723,
+        "isArchived": false
+    },
+    {
+        "id": "cap_015",
+        "author": "Isabelle R.",
+        "avatar": "🌸",
+        "content": "Dimanche dernier, j'ai pleuré en lisant la capsule de ma mère. Elle y parlait de son jardin, de ses tomates, du temps qui passe. Sans algorithme pour nous séparer. Juste nous, une fois par semaine.",
+        "publishedAt": "2026-02-02T18:00:00Z",
+        "likes": 892,
+        "isArchived": false
+    }
+]

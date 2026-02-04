@@ -1,173 +1,748 @@
-
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
 <head>
-	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>Social Wellness Digest</title>
-	<link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600&family=Playfair+Display:ital,wght@0,600;1,600&display=swap" rel="stylesheet">
-	<style>
-		:root {
-			--bg-color: #f7f9fc;
-			--card-bg: #ffffff;
-			--accent: #4a90e2;
-			--accent-soft: #e3f2fd;
-			--text-main: #2c3e50;
-			--text-muted: #7f8c8d;
-			--score-high: #2ecc71;
-			--score-mid: #f1c40f;
-			--score-low: #95a5a6;
-		}
-		body {
-			font-family: 'Outfit', sans-serif;
-			background-color: var(--bg-color);
-			color: var(--text-main);
-			margin: 0;
-			padding: 0;
-			line-height: 1.6;
-		}
-		header {
-			background: linear-gradient(135deg, #1e3c72 0%, #2a5298 100%);
-			color: white;
-			padding: 60px 20px;
-			text-align: center;
-			margin-bottom: 40px;
-		}
-		header h1 {
-			font-family: 'Playfair Display', serif;
-			font-size: 3em;
-			margin: 0;
-			font-weight: 600;
-			letter-spacing: 1px;
-		}
-		header .intro {
-			margin-top: 10px;
-			font-size: 1.2em;
-			opacity: 0.9;
-			font-weight: 300;
-		}
-		.container {
-			max-width: 900px;
-			margin: 0 auto;
-			padding: 0 20px;
-		}
-		.post-card {
-			background: var(--card-bg);
-			border-radius: 16px;
-			box-shadow: 0 10px 30px rgba(0,0,0,0.05);
-			padding: 30px;
-			margin-bottom: 30px;
-			transition: transform 0.2s ease, box-shadow 0.2s ease;
-			border-left: 6px solid transparent;
-		}
-		.post-card:hover {
-			transform: translateY(-5px);
-			box-shadow: 0 15px 40px rgba(0,0,0,0.1);
-		}
-		.post-card.score-high { border-left-color: var(--score-high); }
-		.post-card.score-mid { border-left-color: var(--score-mid); }
-		.post-card.score-low { border-left-color: var(--score-low); }
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Slow Social · Le Rituel du Dimanche</title>
+    <meta name="description" content="Le remède à la machine à traumatismes permanente des flux infinis. Publiez une seule fois par semaine. Dimanche 18h00.">
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --bg: #faf9f7;
+            --bg-alt: #f5f3ef;
+            --text: #1a1a1a;
+            --text-muted: #6b6b6b;
+            --accent: #c9a87c;
+            --accent-dark: #8b7355;
+            --border: #e8e4dc;
+            --card-bg: #ffffff;
+            --shadow: rgba(0,0,0,0.04);
+            --gradient: linear-gradient(135deg, #f5f3ef 0%, #e8e4dc 100%);
+        }
 
-		.meta {
-			display: flex;
-			justify-content: space-between;
-			align-items: center;
-			margin-bottom: 15px;
-			font-size: 0.9em;
-			text-transform: uppercase;
-			letter-spacing: 1px;
-			color: var(--text-muted);
-			font-weight: 600;
-		}
-		.score-badge {
-			background: var(--accent-soft);
-			color: var(--accent);
-			padding: 5px 12px;
-			border-radius: 20px;
-			font-weight: 700;
-		}
-		.content {
-			font-size: 1.15em;
-			color: #34495e;
-			margin-bottom: 20px;
-		}
-		.reasoning {
-			background: #f8f9fa;
-			padding: 15px 20px;
-			border-radius: 8px;
-			font-size: 0.95em;
-			color: #555;
-			border-left: 3px solid #ddd;
-			display: flex;
-			align-items: baseline;
-			gap: 10px;
-		}
-		.reasoning strong {
-			color: var(--accent);
-			font-size: 0.8em;
-			text-transform: uppercase;
-			white-space: nowrap;
-		}
-		.footer {
-			text-align: center;
-			padding: 50px 0;
-			color: var(--text-muted);
-			font-size: 0.9em;
-		}
-		 
-	</style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+
+        body {
+            font-family: 'Inter', -apple-system, sans-serif;
+            background: var(--bg);
+            color: var(--text);
+            line-height: 1.6;
+            min-height: 100vh;
+        }
+
+        /* Header */
+        header {
+            text-align: center;
+            padding: 60px 20px 40px;
+            border-bottom: 1px solid var(--border);
+            background: var(--gradient);
+        }
+
+        .logo {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 2.8rem;
+            font-weight: 600;
+            color: var(--text);
+            cursor: pointer;
+            user-select: none;
+            letter-spacing: -1px;
+        }
+
+        .tagline {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 1.3rem;
+            font-style: italic;
+            color: var(--text-muted);
+            margin-top: 8px;
+        }
+
+        /* Countdown */
+        .countdown-section {
+            background: var(--card-bg);
+            border-bottom: 1px solid var(--border);
+            padding: 30px 20px;
+            text-align: center;
+        }
+
+        .countdown-label {
+            font-size: 0.85rem;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            color: var(--text-muted);
+            margin-bottom: 15px;
+        }
+
+        .countdown {
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+        }
+
+        .countdown-unit {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .countdown-value {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 3rem;
+            font-weight: 600;
+            color: var(--accent-dark);
+            line-height: 1;
+        }
+
+        .countdown-name {
+            font-size: 0.75rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            color: var(--text-muted);
+            margin-top: 5px;
+        }
+
+        .sunday-active {
+            background: linear-gradient(135deg, #c9a87c 0%, #8b7355 100%);
+            color: white;
+        }
+
+        .sunday-active .countdown-label,
+        .sunday-active .countdown-name { color: rgba(255,255,255,0.8); }
+        .sunday-active .countdown-value { color: white; }
+
+        /* Demo Mode Badge */
+        .demo-badge {
+            display: none;
+            position: fixed;
+            top: 10px;
+            right: 10px;
+            background: #27ae60;
+            color: white;
+            padding: 8px 16px;
+            border-radius: 20px;
+            font-size: 0.75rem;
+            font-weight: 500;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            z-index: 1000;
+            animation: pulse 2s infinite;
+        }
+
+        @keyframes pulse {
+            0%, 100% { opacity: 1; }
+            50% { opacity: 0.7; }
+        }
+
+        /* Main Layout */
+        main {
+            max-width: 700px;
+            margin: 0 auto;
+            padding: 40px 20px;
+        }
+
+        /* Compose Section */
+        .compose-section {
+            background: var(--card-bg);
+            border: 1px solid var(--border);
+            border-radius: 16px;
+            padding: 30px;
+            margin-bottom: 50px;
+            box-shadow: 0 4px 20px var(--shadow);
+        }
+
+        .compose-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 20px;
+        }
+
+        .compose-title {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 1.4rem;
+            font-weight: 600;
+        }
+
+        .draft-count {
+            font-size: 0.8rem;
+            color: var(--text-muted);
+            background: var(--bg-alt);
+            padding: 4px 12px;
+            border-radius: 12px;
+        }
+
+        textarea {
+            width: 100%;
+            height: 150px;
+            border: 1px solid var(--border);
+            border-radius: 12px;
+            padding: 20px;
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 1.15rem;
+            line-height: 1.7;
+            resize: none;
+            background: var(--bg);
+            transition: border-color 0.3s, box-shadow 0.3s;
+        }
+
+        textarea:focus {
+            outline: none;
+            border-color: var(--accent);
+            box-shadow: 0 0 0 3px rgba(201, 168, 124, 0.15);
+        }
+
+        textarea::placeholder {
+            color: #aaa;
+            font-style: italic;
+        }
+
+        .compose-actions {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-top: 20px;
+        }
+
+        .char-count {
+            font-size: 0.8rem;
+            color: var(--text-muted);
+        }
+
+        .btn-group {
+            display: flex;
+            gap: 12px;
+        }
+
+        .btn {
+            padding: 12px 24px;
+            border: none;
+            border-radius: 8px;
+            font-family: 'Inter', sans-serif;
+            font-size: 0.9rem;
+            font-weight: 500;
+            cursor: pointer;
+            transition: all 0.2s;
+        }
+
+        .btn-secondary {
+            background: var(--bg-alt);
+            color: var(--text);
+            border: 1px solid var(--border);
+        }
+
+        .btn-secondary:hover { background: var(--border); }
+
+        .btn-primary {
+            background: linear-gradient(135deg, var(--accent) 0%, var(--accent-dark) 100%);
+            color: white;
+        }
+
+        .btn-primary:hover { transform: translateY(-1px); box-shadow: 0 4px 12px rgba(139, 115, 85, 0.3); }
+
+        .btn-primary:disabled {
+            background: #ccc;
+            cursor: not-allowed;
+            transform: none;
+            box-shadow: none;
+        }
+
+        /* Feed Section */
+        .feed-section {
+            margin-top: 40px;
+        }
+
+        .section-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 25px;
+            padding-bottom: 15px;
+            border-bottom: 1px solid var(--border);
+        }
+
+        .section-title {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 1.6rem;
+            font-weight: 600;
+        }
+
+        .section-badge {
+            font-size: 0.75rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            color: var(--accent-dark);
+            background: rgba(201, 168, 124, 0.15);
+            padding: 6px 12px;
+            border-radius: 15px;
+        }
+
+        /* Capsule Card */
+        .capsule {
+            background: var(--card-bg);
+            border: 1px solid var(--border);
+            border-radius: 16px;
+            padding: 25px;
+            margin-bottom: 20px;
+            transition: transform 0.2s, box-shadow 0.2s;
+        }
+
+        .capsule:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 30px var(--shadow);
+        }
+
+        .capsule-header {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            margin-bottom: 15px;
+        }
+
+        .capsule-avatar {
+            font-size: 2rem;
+            width: 50px;
+            height: 50px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: var(--bg-alt);
+            border-radius: 50%;
+        }
+
+        .capsule-meta {
+            flex: 1;
+        }
+
+        .capsule-author {
+            font-weight: 500;
+            font-size: 1rem;
+        }
+
+        .capsule-time {
+            font-size: 0.8rem;
+            color: var(--text-muted);
+        }
+
+        .capsule-content {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 1.2rem;
+            line-height: 1.8;
+            color: var(--text);
+        }
+
+        .capsule-footer {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-top: 20px;
+            padding-top: 15px;
+            border-top: 1px solid var(--border);
+        }
+
+        .capsule-likes {
+            font-size: 0.85rem;
+            color: var(--text-muted);
+            display: flex;
+            align-items: center;
+            gap: 6px;
+        }
+
+        .like-btn {
+            background: none;
+            border: none;
+            cursor: pointer;
+            font-size: 1.1rem;
+            transition: transform 0.2s;
+        }
+
+        .like-btn:hover { transform: scale(1.2); }
+
+        /* Archives Teaser */
+        .archives-teaser {
+            background: var(--gradient);
+            border: 1px solid var(--border);
+            border-radius: 16px;
+            padding: 40px;
+            text-align: center;
+            margin-top: 50px;
+        }
+
+        .archives-title {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 1.5rem;
+            margin-bottom: 10px;
+        }
+
+        .archives-desc {
+            color: var(--text-muted);
+            margin-bottom: 20px;
+            font-size: 0.95rem;
+        }
+
+        .btn-freemium {
+            background: var(--text);
+            color: white;
+            padding: 14px 28px;
+            border-radius: 8px;
+            font-weight: 500;
+        }
+
+        .btn-freemium:hover { background: #333; }
+
+        /* Footer */
+        footer {
+            text-align: center;
+            padding: 40px 20px;
+            border-top: 1px solid var(--border);
+            margin-top: 60px;
+            color: var(--text-muted);
+            font-size: 0.85rem;
+        }
+
+        /* Empty State */
+        .empty-state {
+            text-align: center;
+            padding: 60px 20px;
+            color: var(--text-muted);
+        }
+
+        .empty-icon { font-size: 3rem; margin-bottom: 15px; }
+
+        /* Responsive */
+        @media (max-width: 600px) {
+            .logo { font-size: 2rem; }
+            .countdown-value { font-size: 2rem; }
+            .compose-section { padding: 20px; }
+            textarea { height: 120px; font-size: 1rem; }
+        }
+    </style>
 </head>
 <body>
-	<header>
-		<h1>Social Wellness Digest</h1>
-		<p class="intro">Curated Intelligence for Feb 04, 2026</p>
-	</header>
+    <div class="demo-badge" id="demo-badge">🔓 Mode Démo Actif</div>
 
-	<div class="container">
-		
-		<div class="post-card score-high">
-			<div class="meta">
-				<span>Digital Minimalist</span>
-				<span class="score-badge">90 / 100</span>
-			</div>
-			<div class="content">
-				Why &#39;Slow Productivity&#39; is the Answer to Burnout. In a world of constant pings, Cal Newport argues for doing fewer things at clarity. Deep work is the new superpower. #burnout #focus
-			</div>
-			<div class="reasoning">
-				<strong>Analysis</strong> Relevant to wellness topics: burnout, focus, deep work
-			</div>
-		</div>
-		
-		<div class="post-card score-high">
-			<div class="meta">
-				<span>The Atlantic</span>
-				<span class="score-badge">90 / 100</span>
-			</div>
-			<div class="content">
-				The Age of AI Surveillance: How privacy is becoming a luxury item. New algorithms track emotional states in real-time. We need a new ethics for the digital age. #privacy #ethics
-			</div>
-			<div class="reasoning">
-				<strong>Analysis</strong> Relevant to wellness topics: privacy, surveillance, ethics
-			</div>
-		</div>
-		
-		<div class="post-card score-high">
-			<div class="meta">
-				<span>Wired</span>
-				<span class="score-badge">80 / 100</span>
-			</div>
-			<div class="content">
-				Dopamine Fasting 2.0: Silicon Valley&#39;s latest trend or actual science? Identifying addictive triggers in UX design. #dopamine #addiction
-			</div>
-			<div class="reasoning">
-				<strong>Analysis</strong> Relevant to wellness topics: addiction, dopamine
-			</div>
-		</div>
-		
-	</div>
+    <header>
+        <h1 class="logo" id="logo">Slow Social</h1>
+        <p class="tagline">Le Rituel du Dimanche</p>
+    </header>
 
-	<div class="footer">
-		Generated by <strong>DigestArchitect</strong> &bull; Part of the Radical Utility Ecosystem
-	</div>
+    <div class="countdown-section" id="countdown-section">
+        <div class="countdown-label" id="countdown-label">Prochaine publication dans</div>
+        <div class="countdown" id="countdown">
+            <div class="countdown-unit">
+                <span class="countdown-value" id="days">0</span>
+                <span class="countdown-name">Jours</span>
+            </div>
+            <div class="countdown-unit">
+                <span class="countdown-value" id="hours">0</span>
+                <span class="countdown-name">Heures</span>
+            </div>
+            <div class="countdown-unit">
+                <span class="countdown-value" id="minutes">0</span>
+                <span class="countdown-name">Minutes</span>
+            </div>
+            <div class="countdown-unit">
+                <span class="countdown-value" id="seconds">0</span>
+                <span class="countdown-name">Secondes</span>
+            </div>
+        </div>
+    </div>
+
+    <main>
+        <!-- Compose Section -->
+        <section class="compose-section">
+            <div class="compose-header">
+                <h2 class="compose-title">Votre Capsule</h2>
+                <span class="draft-count" id="draft-count">0 brouillon(s)</span>
+            </div>
+            <textarea id="draft-content" placeholder="Prenez le temps de formuler votre pensée. Elle attendra dimanche..."></textarea>
+            <div class="compose-actions">
+                <span class="char-count"><span id="char-current">0</span> / 500 caractères</span>
+                <div class="btn-group">
+                    <button class="btn btn-secondary" onclick="saveDraft()">Sauvegarder</button>
+                    <button class="btn btn-primary" id="publish-btn" onclick="publishCapsule()">
+                        Publier
+                    </button>
+                </div>
+            </div>
+        </section>
+
+        <!-- Feed Section -->
+        <section class="feed-section">
+            <div class="section-header">
+                <h2 class="section-title">Le Flux Dominical</h2>
+                <span class="section-badge" id="feed-status">Dimanche 18h00</span>
+            </div>
+            <div id="feed-container">
+                <!-- Capsules will be injected here -->
+            </div>
+        </section>
+
+        <!-- Archives Teaser -->
+        <section class="archives-teaser">
+            <h3 class="archives-title">📦 Archives Éphémères</h3>
+            <p class="archives-desc">Les capsules disparaissent après 24h. Accédez à vos souvenirs avec Slow Social Premium.</p>
+            <button class="btn btn-freemium">Débloquer les Archives · 2,99€/mois</button>
+        </section>
+    </main>
+
+    <footer>
+        <p>Slow Social · Le remède au burnout numérique</p>
+        <p style="margin-top: 5px; font-size: 0.75rem;">Pas de publicité. Pas d'algorithme. Juste vous, une fois par semaine.</p>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="client/DraftManager.js"></script>
+    <script>
+        // ============================================
+        // SLOW SOCIAL - FRONTEND LOGIC
+        // ============================================
+
+        const manager = new DraftManager();
+        let demoMode = false;
+        let logoClickCount = 0;
+        let logoClickTimer = null;
+
+        // SEED DATA (loaded from JSON in production, inline for demo)
+        const seedCapsules = [
+            {"id":"cap_001","author":"Marie L.","avatar":"🌿","content":"Cette semaine, j'ai éteint mon téléphone pendant 4 heures chaque jour. Le silence est devenu mon luxe. Le monde ne s'est pas effondré.","publishedAt":"2026-02-02T18:00:00Z","likes":234},
+            {"id":"cap_002","author":"Thomas D.","avatar":"☕","content":"Dimanche, 17h58. Je regarde mes pensées de la semaine s'accumuler. Ce moment de publication est devenu sacré. Pas de scroll infini, juste cette fenêtre unique.","publishedAt":"2026-02-02T18:00:00Z","likes":189},
+            {"id":"cap_003","author":"Claire B.","avatar":"🎨","content":"Mon rituel dominical : un thé, une bougie, et 20 minutes pour relire tout ce que j'ai écrit cette semaine. La plupart ne sera jamais publié. Et c'est très bien ainsi.","publishedAt":"2026-02-02T18:00:00Z","likes":312},
+            {"id":"cap_004","author":"Antoine R.","avatar":"🌅","content":"J'ai quitté Instagram il y a 3 mois. Slow Social est la seule plateforme où je partage encore. Une fois par semaine, avec intention.","publishedAt":"2026-02-02T18:00:00Z","likes":456},
+            {"id":"cap_005","author":"Sophie M.","avatar":"📚","content":"Avant, je publiais 15 stories par jour. Aujourd'hui, je rédige une seule pensée pendant 7 jours. La qualité a remplacé la quantité.","publishedAt":"2026-02-02T18:00:00Z","likes":278},
+            {"id":"cap_006","author":"Lucas P.","avatar":"🌙","content":"Le burnout numérique m'a frappé l'an dernier. 63% des community managers sont touchés. Slow Social n'est pas une app, c'est une thérapie.","publishedAt":"2026-02-02T18:00:00Z","likes":521},
+            {"id":"cap_007","author":"Emma V.","avatar":"🦋","content":"Mon enfant m'a demandé pourquoi je ne regardais plus mon téléphone le dimanche soir. J'ai répondu : 'Parce que je choisis mes moments de connexion.'","publishedAt":"2026-02-02T18:00:00Z","likes":634},
+            {"id":"cap_008","author":"Hugo T.","avatar":"🎵","content":"BeReal voulait l'authenticité mais créait l'anxiété. Slow Social a compris : le timing compte. 18h00 dimanche, c'est notre rendez-vous.","publishedAt":"2026-02-02T18:00:00Z","likes":198}
+        ];
+
+        // ============================================
+        // DEMO MODE (Triple-click on logo)
+        // ============================================
+        document.getElementById('logo').addEventListener('click', () => {
+            logoClickCount++;
+            if (logoClickTimer) clearTimeout(logoClickTimer);
+            
+            logoClickTimer = setTimeout(() => { logoClickCount = 0; }, 500);
+
+            if (logoClickCount >= 3) {
+                demoMode = !demoMode;
+                document.getElementById('demo-badge').style.display = demoMode ? 'block' : 'none';
+                updateUI();
+                logoClickCount = 0;
+            }
+        });
+
+        // ============================================
+        // COUNTDOWN LOGIC
+        // ============================================
+        function getNextSunday18UTC() {
+            const now = new Date();
+            let target = new Date(now);
+            
+            // Set to Sunday
+            const dayOfWeek = now.getUTCDay();
+            const daysUntilSunday = (7 - dayOfWeek) % 7;
+            target.setUTCDate(target.getUTCDate() + daysUntilSunday);
+            target.setUTCHours(18, 0, 0, 0);
+
+            // If it's Sunday but past 18:00, go to next Sunday
+            if (dayOfWeek === 0 && now.getUTCHours() >= 18) {
+                target.setUTCDate(target.getUTCDate() + 7);
+            }
+
+            return target;
+        }
+
+        function isSundayWindow() {
+            const now = new Date();
+            return now.getUTCDay() === 0 && now.getUTCHours() >= 18;
+        }
+
+        function updateCountdown() {
+            const now = new Date();
+            const target = getNextSunday18UTC();
+            const diff = target - now;
+
+            if (diff <= 0 || demoMode || isSundayWindow()) {
+                // It's GO TIME
+                document.getElementById('countdown-section').classList.add('sunday-active');
+                document.getElementById('countdown-label').textContent = demoMode ? '🔓 Mode Démo - Publication Débloquée' : '🌟 C\'est le moment ! Publiez votre capsule';
+                document.getElementById('days').textContent = '0';
+                document.getElementById('hours').textContent = '0';
+                document.getElementById('minutes').textContent = '0';
+                document.getElementById('seconds').textContent = '0';
+            } else {
+                document.getElementById('countdown-section').classList.remove('sunday-active');
+                document.getElementById('countdown-label').textContent = 'Prochaine publication dans';
+
+                const days = Math.floor(diff / (1000 * 60 * 60 * 24));
+                const hours = Math.floor((diff % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+                const minutes = Math.floor((diff % (1000 * 60 * 60)) / (1000 * 60));
+                const seconds = Math.floor((diff % (1000 * 60)) / 1000);
+
+                document.getElementById('days').textContent = days;
+                document.getElementById('hours').textContent = hours;
+                document.getElementById('minutes').textContent = minutes;
+                document.getElementById('seconds').textContent = seconds;
+            }
+        }
+
+        // ============================================
+        // DRAFT MANAGEMENT
+        // ============================================
+        const textarea = document.getElementById('draft-content');
+        
+        textarea.addEventListener('input', () => {
+            const len = textarea.value.length;
+            document.getElementById('char-current').textContent = len;
+            if (len > 500) {
+                textarea.value = textarea.value.substring(0, 500);
+            }
+        });
+
+        function saveDraft() {
+            const content = textarea.value.trim();
+            if (!content) return alert('Écrivez quelque chose avant de sauvegarder.');
+            
+            manager.saveDraft(content);
+            textarea.value = '';
+            document.getElementById('char-current').textContent = '0';
+            updateDraftCount();
+            showToast('Brouillon sauvegardé ✓');
+        }
+
+        function updateDraftCount() {
+            const drafts = manager.getAllDrafts().filter(d => d.status === 'draft');
+            document.getElementById('draft-count').textContent = `${drafts.length} brouillon(s)`;
+        }
+
+        // ============================================
+        // PUBLISH LOGIC
+        // ============================================
+        function publishCapsule() {
+            const canPublish = demoMode || isSundayWindow();
+            
+            if (!canPublish) {
+                return alert('🔒 Publication uniquement le dimanche à 18h00 UTC.\n\nTriple-cliquez sur "Slow Social" pour activer le mode démo.');
+            }
+
+            const content = textarea.value.trim();
+            if (!content) {
+                // Try to publish latest draft
+                const drafts = manager.getAllDrafts().filter(d => d.status === 'draft');
+                if (drafts.length === 0) return alert('Aucun brouillon à publier.');
+                
+                const result = manager.publishDraft(drafts[drafts.length - 1].id);
+                if (result.success) {
+                    showToast('Capsule publiée ! 🎉');
+                    renderFeed();
+                    updateDraftCount();
+                }
+            } else {
+                // Save and publish in one go
+                const draft = manager.saveDraft(content);
+                manager.publishDraft(draft.id);
+                textarea.value = '';
+                document.getElementById('char-current').textContent = '0';
+                showToast('Capsule publiée ! 🎉');
+                renderFeed();
+                updateDraftCount();
+            }
+        }
+
+        // ============================================
+        // FEED RENDERING
+        // ============================================
+        function renderFeed() {
+            const container = document.getElementById('feed-container');
+            const canView = demoMode || isSundayWindow();
+
+            if (!canView) {
+                container.innerHTML = `
+                    <div class="empty-state">
+                        <div class="empty-icon">🌙</div>
+                        <p>Le flux s'éveille dimanche à 18h00 UTC.</p>
+                        <p style="font-size: 0.85rem; margin-top: 10px;">En attendant, prenez le temps d'écrire.</p>
+                    </div>
+                `;
+                return;
+            }
+
+            // Combine seed capsules with user-published ones
+            const userPublished = manager.getAllDrafts()
+                .filter(d => d.status === 'published')
+                .map(d => ({
+                    id: d.id,
+                    author: 'Vous',
+                    avatar: '👤',
+                    content: d.content,
+                    publishedAt: d.publishedAt || d.timestamp,
+                    likes: 0
+                }));
+
+            const allCapsules = [...userPublished, ...seedCapsules];
+
+            container.innerHTML = allCapsules.map(cap => `
+                <article class="capsule">
+                    <div class="capsule-header">
+                        <div class="capsule-avatar">${cap.avatar}</div>
+                        <div class="capsule-meta">
+                            <div class="capsule-author">${cap.author}</div>
+                            <div class="capsule-time">${formatTime(cap.publishedAt)}</div>
+                        </div>
+                    </div>
+                    <div class="capsule-content">${cap.content}</div>
+                    <div class="capsule-footer">
+                        <div class="capsule-likes">
+                            <button class="like-btn" onclick="likeCapsule('${cap.id}')">♡</button>
+                            <span>${cap.likes || 0}</span>
+                        </div>
+                        <span style="font-size: 0.8rem; color: var(--text-muted);">Rituel du Dimanche</span>
+                    </div>
+                </article>
+            `).join('');
+        }
+
+        function formatTime(isoString) {
+            const date = new Date(isoString);
+            return date.toLocaleDateString('fr-FR', { 
+                weekday: 'long', 
+                day: 'numeric', 
+                month: 'long',
+                hour: '2-digit',
+                minute: '2-digit'
+            });
+        }
+
+        function likeCapsule(id) {
+            showToast('❤️ Apprécié');
+        }
+
+        // ============================================
+        // UI HELPERS
+        // ============================================
+        function updateUI() {
+            updateCountdown();
+            updateDraftCount();
+            renderFeed();
+            
+            const publishBtn = document.getElementById('publish-btn');
+            const canPublish = demoMode || isSundayWindow();
+            publishBtn.disabled = !canPublish;
+            publishBtn.textContent = canPublish ? 'Publier' : '🔒 Dimanche 18h';
+        }
+
+        function showToast(msg) {
+            const toast = document.createElement('div');
+            toast.style.cssText = 'position: fixed; bottom: 20px; left: 50%; transform: translateX(-50%); background: #333; color: white; padding: 12px 24px; border-radius: 8px; font-size: 0.9rem; z-index: 9999; animation: fadeIn 0.3s;';
+            toast.textContent = msg;
+            document.body.appendChild(toast);
+            setTimeout(() => toast.remove(), 2500);
+        }
+
+        // ============================================
+        // INIT
+        // ============================================
+        updateUI();
+        setInterval(updateCountdown, 1000);
+    </script>
 </body>
 </html>
