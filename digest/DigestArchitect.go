@@ -53,44 +53,153 @@ func main() {
 func generateHTML(posts []Post, outputPath string) {
 	const tpl = `
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>Social Wellness Digest</title>
+	<link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600&family=Playfair+Display:ital,wght@0,600;1,600&display=swap" rel="stylesheet">
 	<style>
-		body { font-family: 'Helvetica Neue', sans-serif; max-width: 800px; margin: 40px auto; padding: 20px; color: #333; }
-		h1 { color: #2c3e50; border-bottom: 2px solid #eee; padding-bottom: 10px; }
-		.intro { color: #7f8c8d; margin-bottom: 40px; }
-		.post { background: #f9f9f9; padding: 20px; margin-bottom: 20px; border-radius: 8px; border-left: 5px solid #3498db; }
-		.meta { font-size: 0.85em; color: #95a5a6; margin-bottom: 10px; }
-		.score { float: right; font-weight: bold; color: #27ae60; }
-		.content { font-size: 1.1em; line-height: 1.6; }
-		.reasoning { margin-top: 15px; font-size: 0.9em; background: #fff; padding: 10px; border-radius: 4px; border: 1px solid #eee; color: #666; }
-		.footer { margin-top: 50px; text-align: center; color: #bdc3c7; font-size: 0.8em; }
+		:root {
+			--bg-color: #f7f9fc;
+			--card-bg: #ffffff;
+			--accent: #4a90e2;
+			--accent-soft: #e3f2fd;
+			--text-main: #2c3e50;
+			--text-muted: #7f8c8d;
+			--score-high: #2ecc71;
+			--score-mid: #f1c40f;
+			--score-low: #95a5a6;
+		}
+		body {
+			font-family: 'Outfit', sans-serif;
+			background-color: var(--bg-color);
+			color: var(--text-main);
+			margin: 0;
+			padding: 0;
+			line-height: 1.6;
+		}
+		header {
+			background: linear-gradient(135deg, #1e3c72 0%, #2a5298 100%);
+			color: white;
+			padding: 60px 20px;
+			text-align: center;
+			margin-bottom: 40px;
+		}
+		header h1 {
+			font-family: 'Playfair Display', serif;
+			font-size: 3em;
+			margin: 0;
+			font-weight: 600;
+			letter-spacing: 1px;
+		}
+		header .intro {
+			margin-top: 10px;
+			font-size: 1.2em;
+			opacity: 0.9;
+			font-weight: 300;
+		}
+		.container {
+			max-width: 900px;
+			margin: 0 auto;
+			padding: 0 20px;
+		}
+		.post-card {
+			background: var(--card-bg);
+			border-radius: 16px;
+			box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+			padding: 30px;
+			margin-bottom: 30px;
+			transition: transform 0.2s ease, box-shadow 0.2s ease;
+			border-left: 6px solid transparent;
+		}
+		.post-card:hover {
+			transform: translateY(-5px);
+			box-shadow: 0 15px 40px rgba(0,0,0,0.1);
+		}
+		.post-card.score-high { border-left-color: var(--score-high); }
+		.post-card.score-mid { border-left-color: var(--score-mid); }
+		.post-card.score-low { border-left-color: var(--score-low); }
+
+		.meta {
+			display: flex;
+			justify-content: space-between;
+			align-items: center;
+			margin-bottom: 15px;
+			font-size: 0.9em;
+			text-transform: uppercase;
+			letter-spacing: 1px;
+			color: var(--text-muted);
+			font-weight: 600;
+		}
+		.score-badge {
+			background: var(--accent-soft);
+			color: var(--accent);
+			padding: 5px 12px;
+			border-radius: 20px;
+			font-weight: 700;
+		}
+		.content {
+			font-size: 1.15em;
+			color: #34495e;
+			margin-bottom: 20px;
+		}
+		.reasoning {
+			background: #f8f9fa;
+			padding: 15px 20px;
+			border-radius: 8px;
+			font-size: 0.95em;
+			color: #555;
+			border-left: 3px solid #ddd;
+			display: flex;
+			align-items: baseline;
+			gap: 10px;
+		}
+		.reasoning strong {
+			color: var(--accent);
+			font-size: 0.8em;
+			text-transform: uppercase;
+			white-space: nowrap;
+		}
+		.footer {
+			text-align: center;
+			padding: 50px 0;
+			color: var(--text-muted);
+			font-size: 0.9em;
+		}
+		/* Utility for score colors in the badge if desired, simple mapping for now */
 	</style>
 </head>
 <body>
-	<h1>Weekly Social Digest</h1>
-	<p class="intro">Your curated feed for {{ .Date }}. Optimized for mental clarity.</p>
+	<header>
+		<h1>Social Wellness Digest</h1>
+		<p class="intro">Curated Intelligence for {{ .Date }}</p>
+	</header>
 
-	{{ range .Posts }}
-	<div class="post">
-		<div class="meta">
-			{{ .Source }} 
-			<span class="score">Score: {{ .RelevanceScore }}</span>
+	<div class="container">
+		{{ range .Posts }}
+		<div class="post-card {{ if ge .RelevanceScore 70.0 }}score-high{{ else if ge .RelevanceScore 40.0 }}score-mid{{ else }}score-low{{ end }}">
+			<div class="meta">
+				<span>{{ .Source }}</span>
+				<span class="score-badge">{{ printf "%.0f" .RelevanceScore }} / 100</span>
+			</div>
+			<div class="content">
+				{{ .Text }}
+			</div>
+			<div class="reasoning">
+				<strong>Analysis</strong> {{ .Reasoning }}
+			</div>
 		</div>
-		<div class="content">
-			{{ .Text }}
+		{{ else }}
+		<div class="post-card" style="text-align: center; padding: 50px;">
+			<h2>No Noise Today.</h2>
+			<p>We found no content that met your strict wellness criteria. Enjoy the silence.</p>
 		</div>
-		<div class="reasoning">
-			<strong>Why this?</strong> {{ .Reasoning }}
-		</div>
+		{{ end }}
 	</div>
-	{{ else }}
-	<p>No high-relevance posts found this week. Enjoy your free time!</p>
-	{{ end }}
 
 	<div class="footer">
-		Generated by DigestArchitect | Radical Utility Ecosystem
+		Generated by <strong>DigestArchitect</strong> &bull; Part of the Radical Utility Ecosystem
 	</div>
 </body>
 </html>`

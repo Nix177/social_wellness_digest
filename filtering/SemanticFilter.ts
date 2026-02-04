@@ -24,28 +24,50 @@ class SemanticFilter {
     }
 
     /**
-     * Simulates sending content to an LLM (e.g., Azure OpenAI)
-     * Returns a score, category, and reasoning.
+     * analyzing content based on a keyword heuristic to simulate "Semantic Filtering".
+     * In a production env, this would call an LLM API.
      */
     private async analyzeWithLLM(post: Post): Promise<ScoredPost> {
-        // MOCK LLM LOGIC
-        // In reality, this would be a fetch call to OpenAI API using LangChain
+        // Keywords aligned with "Social Wellness" & "Tech Balance"
+        const highValueKeywords = [
+            "burnout", "mental health", "déconnexion", "addiction",
+            "dopamine", "nature", "meditation", "focus", "deep work",
+            "privacy", "surveillance", "éthique", "ethics", "slow web"
+        ];
 
-        const keywords = ["Burnout", "Mental Health", "AI", "Rust"];
-        let score = Math.floor(Math.random() * 60); // Base noise
+        const techKeywords = [
+            "ai", "ia", "rust", "python", "algorithm", "data",
+            "tech", "future", "innovation", "science"
+        ];
 
-        const content = post.text.toLowerCase();
+        const content = (post.text + " " + (post.metadata?.extra?.link || "")).toLowerCase();
 
-        // Boost score if meaningful keywords are found
-        if (keywords.some(k => content.includes(k.toLowerCase()))) {
-            score += 40;
+        let score = 0;
+        let reasoning = "General tech content.";
+
+        // Scoring Logic
+        let matchedWellness = highValueKeywords.filter(k => content.includes(k));
+        let matchedTech = techKeywords.filter(k => content.includes(k));
+
+        if (matchedWellness.length > 0) {
+            score += 60 + (matchedWellness.length * 10);
+            reasoning = `Relevant to wellness topics: ${matchedWellness.join(", ")}`;
+        } else if (matchedTech.length > 0) {
+            score += 30 + (matchedTech.length * 5);
+            reasoning = `General tech update: ${matchedTech.join(", ")}`;
+        } else {
+            score = 10;
+            reasoning = "Low relevance match.";
         }
+
+        // Boost for specific sources if needed (optional)
+        if (post.source.includes("Techno-Science")) score += 5;
 
         return {
             ...post,
             relevanceScore: Math.min(score, 100),
-            category: score > 70 ? "High Value" : "Noise",
-            reasoning: score > 70 ? "Relevant to user interests" : "Generic content"
+            category: score >= 70 ? "High Value" : (score >= 40 ? "Interesting" : "Noise"),
+            reasoning: reasoning
         };
     }
 
